@@ -18,3 +18,11 @@ Mobile-first Three.js + Spark proof of concept showing a licensed SPZ asset alon
 Zero-cost-first. No default branch edits, merges, deployments, paid services, or unattended loops without approval.
 
 Upstream: https://github.com/sparkjsdev/spark
+
+## Verification pass — 2026-11-15
+- Verified package metadata from default branch: Spark 2.4.0; MIT; Three.js peer dependency >=0.180.0; Node/Vite/TypeScript with Rust/WASM build stage.
+- Available commands confirmed: `npm run lint`, `npm test`, `npm run types`, `npm run test:browser`, `npm run test:rust`, `npm run build:wasm`.
+- README example loads `butterfly.spz` from a remote demo asset. This is a rendering example, **not** a scientific dataset; attribution/redistribution permissions must be checked before reuse.
+- Execution blocker: current build environment cannot resolve github.com, so repository checkout and tests have **not** run. No CI success is claimed.
+- Browser requirements: WebGL2; performance and fallback remain unverified on target mobile hardware.
+- Next gate: use an accessible CI runner or checkout to execute tests; capture logs and commit SHA before demo integration.
